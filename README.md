@@ -3,7 +3,7 @@ Modification of smart Wifi lamp Sber SBDV-00120 for work with esphome with repla
 Модификация умной лампы Sber от SberDevices SBDV-00120 (LED A70 E27) для работы с ESPHome и Home Assistant.
 
 Лампа основана на микроконтроллере Beken BK7231N. Управление светодиодами осуществляется по i2c led-драйвером BP5758D (5 каналов, до 90 mA на канал). Порядок каналов: Blue, Green, Red, White Cold, White Warm.
-Модель управляющей платы (MCU) - CB2L. На управляющей плате есть тестовые точки для подключения UART (TX1, RX1, TX2); SPI (CSN).
+Модель управляющей платы (MCU) - CB2L. На управляющей плате есть тестовые точки для подключения UART (TX1, RX1, TX2); SPI (CSN), RST (CEN), GPIO (P24, P26, P6, P7, P8).
 
 Внимание: контакты MOSI, MISO, CLK на плате не разведены. Подпаяться и считать/перепрограммировать прошивку через spi программатор у меня не удалось.
 Разборка аналогична другой лампе от сбера, подробная инструкция выложена пользователем @esnet146 (https://github.com/esnet146/rgb-cw-lamp-sber).
@@ -12,6 +12,7 @@ Modification of smart Wifi lamp Sber SBDV-00120 for work with esphome with repla
 
 Подключение к плате лампы по следующей схеме (порядок от края платы лампы):
 | ЛАМПА | CRL2 | ESP01 |
+| ----- | ---- | ----- |
 | 3.3V  | 3V3  | 3.3V  |
 | GND   | GND  | GND   |
 | ?     | P24  | NC    |
