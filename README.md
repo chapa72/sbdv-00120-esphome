@@ -1,6 +1,7 @@
 # sbdv-00120-esphome
 Modification of smart Wifi lamp Sber SBDV-00120 for work with esphome with replacement of controller esp-01f (esp8266ex)
 Модификация умной лампы Sber от SberDevices SBDV-00120 (LED A70 E27) для работы с ESPHome и Home Assistant.
+Обзор лампы в заводском исполнении представлен на хабре (https://habr.com/ru/companies/lamptest/articles/829536/).
 
 Лампа основана на микроконтроллере Beken BK7231N. Управление светодиодами осуществляется по i2c led-драйвером BP5758D (5 каналов, до 90 mA на канал). Порядок каналов: Blue, Green, Red, White Cold, White Warm.
 Модель управляющей платы (MCU) - CB2L. На управляющей плате есть тестовые точки для подключения UART (TX1, RX1, TX2); SPI (CSN), RST (CEN), GPIO (P24, P26, P6, P7, P8). Имеющиеся фото внутренностей в репозитории в папке Photos.
