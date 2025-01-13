@@ -80,7 +80,7 @@ output:
   - platform: bp5758d
     id: output_blue
     channel: 1
-    current: 20
+    current: 8
     min_power: 0.001
     zero_means_zero: true
   - platform: bp5758d
@@ -92,19 +92,19 @@ output:
   - platform: bp5758d
     id: output_red
     channel: 3
-    current: 15
+    current: 20
     min_power: 0.001
     zero_means_zero: true
   - platform: bp5758d
     id: output_cold
     channel: 4
-    current: 24
+    current: 22
     min_power: 0.001
     zero_means_zero: true
   - platform: bp5758d
     id: output_warm
     channel: 5
-    current: 26
+    current: 24
     min_power: 0.001
     zero_means_zero: true
 
@@ -119,7 +119,7 @@ light:
     cold_white_color_temperature: 6200 K
     warm_white_color_temperature: 2700 K 
     color_interlock: true
-    constant_brightness: false
+    constant_brightness: true
     restore_mode: RESTORE_DEFAULT_OFF
     default_transition_length: 400ms
     gamma_correct: 2.8
